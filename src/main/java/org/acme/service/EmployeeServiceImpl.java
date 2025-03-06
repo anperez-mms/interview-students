@@ -1,19 +1,21 @@
 package org.acme.service;
 
-import lombok.extern.slf4j.Slf4j;
 import org.acme.dto.EmployeeDTO;
 import org.acme.entity.EmployeeEntity;
 import org.acme.repository.EmployeeRepository;
 import org.acme.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Slf4j
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
+
+    Logger log = LoggerFactory.getLogger(EmployeeService.class);
 
     @Autowired
     private EmployeeRepository employeeRepository;
